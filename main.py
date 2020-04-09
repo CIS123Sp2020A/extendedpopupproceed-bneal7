@@ -1,11 +1,20 @@
-#Your name goes here
+##Brooklyn Neal
 
-#Your algorithm should go here OR you should use comments throughout
+from tkinter import*
+import tkinter.messagebox as box
 
-#Your code goes here
-import tkinter
-import tkinter.messagebox as box 
+window = Tk()
+window.title("message Box Example")
+
+def dialog():
+    var = box.askyesno("message box", "Proceed?")
+    if var ==1:
+        box.showinfo('Yes box', 'Proceeding...')
+    else:
+        box.showwarning('No box', 'Cancelling...')
 
 
-# Create the main window
-self.main_window = tkinter.Tk()
+btn = Button(window, text='Click', command=dialog)
+
+btn.pack(padx=150, pady=50)
+window.mainloop()
